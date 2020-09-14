@@ -1,0 +1,16 @@
+{
+    "gcp_billing_account_id": "XXXXXX-XXXXXX-XXXXXX",
+    "gcp_project_name": "pip Templates",
+
+    "mgmt_instance_name": "pip-templates-mgmt",
+    "mgmt_instance_zone": "us-east1-b",
+    "mgmt_instance_size": "e2-micro",
+    "mgmt_instance_pub_ssh_name": "pip-templates",
+    "mgmt_instance_pub_ssh_path": "config/id_rsa.pub",
+    "mgmt_instance_image": "ubuntu-1604-xenial-v20200908",
+    "mgmt_instance_image_project": "ubuntu-os-cloud",
+    "mgmt_instance_disk_size": "10GB",
+    "mgmt_instance_disk_type": "pd-standard",
+    "mgmt_instance_disk_name": "pip-templates-mgmt-disk"
+
+}
