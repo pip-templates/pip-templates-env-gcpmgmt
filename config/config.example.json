@@ -12,5 +12,4 @@
     "mgmt_instance_disk_size": "10GB",
     "mgmt_instance_disk_type": "pd-standard",
     "mgmt_instance_disk_name": "pip-templates-mgmt-disk"
-
 }

@@ -51,8 +51,6 @@ if ($resources.gcp_project_id -ne $null) {
 
 # Read ssh key
 $pubKey = Get-Content -Path "$path/../$($config.mgmt_instance_pub_ssh_path)"
-# # Add escape characters
-# $pubKey = $pubKey.Replace(" ", "\ ").Replace("+", "\+")
 
 # Create management station virtual machine
 Write-Host "Creating management station virtual machine..."
@@ -65,6 +63,7 @@ gcloud beta compute --project="$($resources.gcp_project_id)" instances create "$
     --maintenance-policy=MIGRATE `
     --service-account="$($resources.gcp_project_number)-compute@developer.gserviceaccount.com" `
     --scopes="https://www.googleapis.com/auth/cloud-platform" `
+    --tags=default-allow-ssh `
     --image="$($config.mgmt_instance_image)" `
     --image-project="$($config.mgmt_instance_image_project)" `
     --boot-disk-size="$($config.mgmt_instance_disk_size)" `
